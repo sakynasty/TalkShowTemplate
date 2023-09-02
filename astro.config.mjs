@@ -5,11 +5,11 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  host: "vsp-demo.pages.dev"
+  site: "https://vsp-demo.pages.dev"
   /*server: {
     port: 3000
   },*/
   integrations: [tailwind()],
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare({ mode: 'directory' })
 });
