@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets"
+import VSPLogo from "../assets/img/VSP_8.png"
+
+var classA = "hover:pb-4 hover:border-b-4 hover:border-sky-700";
+var classADropdown = "text-sm hover:bg-slate-800 dark:text-slate-100 block px-4 py-2";
+---
+
+<nav class="lg:px-16 px-6 dark:bg-slate-900 dark:text-slate-100 shadow-md flex flex-wrap items-center lg:py-0 py-2">
+    <div class="flex-1 flex justify-between items-center">
+      <a href="/" class="flex text-lg font-semibold">
+        <Image src={VSPLogo} width="105" height="50" class="p-2" alt="VSP Logo" draggable="false" />
+      </a>
+    </div>
+    <label for="menu-toggle" class="cursor-pointer lg:hidden block dark:bg-slate-100">
+      <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <title>menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <ul class="text-xl text-center items-center gap-x-5 pt-4 md:gap-x-4 lg:text-lg lg:flex lg:pt-0">
+          <li class="py-2 lg:py-0">
+            <a href="/" class={classA}> Accueil </a>
+          </li>
+          <li>
+            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class={classA}>
+                Catalogue 
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownHover" class="hidden dark:bg-slate-900 dark:text-slate-100 z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                    <li>
+                        <a href="/kustalkshow" class={classADropdown}>Kus Talk Show</a>
+                    </li>
+                    <li>
+                        <a href="/personaljourney" class={classADropdown}>Personal Journey</a>
+                    </li>
+                    <li>
+                        <a href="/reportages" class={classADropdown}>Reportages</a>
+                    </li>
+                    <li>
+                        <a href="/wrongpersonbadjob" class={classADropdown}>Wrong Person, Bad Job!</a>
+                    </li>
+                    <li>
+                        <a href="/lostinthemetaverse" class={classADropdown}>Lost in the Metaverse</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+          <li class="py-2 lg:py-0">
+            <a href="/a-propos" class={classA}> À propos </a>
+          </li>
+          <li class="py-2 lg:py-0">
+            <a href="/contact" class={classA}> Contact </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+</nav>
+
+<style>
+    #menu-toggle:checked + #menu {
+        display: block;
+    }
+</style>
