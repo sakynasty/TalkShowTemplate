@@ -1,0 +1,128 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import StaffCard from '../components/StaffCard.astro';
+
+var staffPath = "../assets/img/staff/";
+---
+
+<Layout title="À propos | Virtual Show Production - Démonstration" description="! Demonstration du nouveau code/design ce site n'est pas le réel VSP !">
+	<Navbar />
+    <p class="mt-5 text-2xl text-center align-center">
+        À propos du
+    </p>
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
+        <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
+            Virtual Show Production
+        </span>
+    </h1>
+    <div class="container mx-auto max-w-2xl">
+        <p class="mt-5">
+            Virtual Show Production (VSP) est une production de contenu audiovisuel dans le domaine de la 
+            <a href="https://fr.wikipedia.org/wiki/R%C3%A9alit%C3%A9_virtuelle" target="_blank" title="C'est quoi la RV ?" rel="noopener" class="underline underline-offset-3 decoration-4 decoration-sky-700 dark:decoration-sky-700">
+                réalité virtuelle
+            </a>.
+        </p>
+        <p class="mt-2">
+            Fondée en novembre 2022 par un groupe de volontaires passionnés de la 
+            <a href="https://fr.wikipedia.org/wiki/R%C3%A9alit%C3%A9_virtuelle" target="_blank" title="C'est quoi la RV ?" rel="noopener" class="underline underline-offset-3 decoration-4 decoration-sky-700 dark:decoration-sky-700">
+                réalité virtuelle
+            </a> 
+            et de la création d'émissions à caractère réflexif, 
+            VSP vise à repousser les limites de l'expérience du spectacle en utilisant les dernières technologies et en adoptant une approche créative.
+        </p>
+        <h1 class="mt-10 mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
+            <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
+                L'histoire du VSP
+            </span>
+        </h1>
+        <p class="mt-5">
+            La création de VSP est le résultat de la convergence des intérêts et de la créativité de ses fondateurs, 
+            tous fervents amateurs de la réalité virtuelle. 
+            Ils ont vu en cette technologie immersive une opportunité exceptionnelle pour repenser la manière dont les émissions de télévision 
+            sont produites et consommées. Cette vision audacieuse a donné naissance à une production qui allie l'innovation technologique à la narration captivante.
+        </p>
+        <h1 class="mt-10 mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
+            <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
+                Diffusion du VSP
+            </span>
+        </h1>
+        <p class="mt-5">
+            Les émissions de VSP sont diffusées en direct et rediffusées sur des plateformes telles que Twitch et YouTube. 
+            De plus, les spectateurs ont la possibilité de rejoindre les plateaux et de voir le spectacle depuis le public, 
+            renforçant ainsi l'interaction et l'immersion dans l'univers de la réalité virtuelle.
+        </p>
+        <p class="mt-5 mb-5">
+            Virtual Show Production représente un exemple inspirant de la manière dont la technologie peut être utilisée pour repenser 
+            la manière dont les émissions sont produites et consommées. Cette production ouvre de nouvelles perspectives passionnantes 
+            dans le monde de la production audiovisuelle en France et au-delà, en combinant la créativité humaine avec les possibilités 
+            infinies offertes par la réalité virtuelle.
+        </p>
+        <hr>
+        <p class="mt-5 text-2xl text-center align-center">
+            L'équipe du
+        </p>
+        <h1 class="mb-10 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
+            <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
+                Virtual Show Production
+            </span>
+        </h1>
+    </div>
+        <div class="grid gap-3 lg:gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
+            <StaffCard 
+                name="Mr Kus"
+                image={staffPath+"kuss.webp"}
+                rank="Directeur de production"
+                email="m.huguet@virtualshowproduction.com"
+                rank2=''
+            />
+            <StaffCard 
+                name="Saturniaa"
+                image={staffPath+"saturniaa.webp"}
+                rank="Directrice adjointe de production"
+                rank2="Chroniqueuse rubrique découverte"
+                email="saturniaa@virtualshowproduction.com"
+            />
+            <StaffCard 
+                name="Ranily"
+                image={staffPath+"ranily.webp"}
+                rank="Directeur Technique"
+                rank2="Régisseur Multimédia"
+                email="contact@virtualshowproduction.com"
+            />
+            <StaffCard 
+                name="Scarabée"
+                image={staffPath+"scarabee.webp"}
+                rank="Régisseur Caméra"
+                rank2=''
+                email=''
+            />
+            <StaffCard 
+                name="CréaCube"
+                image={staffPath+"creacube.webp"}
+                rank="Chroniqueur rubrique Infos"
+                rank2=''
+                email=''
+            />
+            <StaffCard 
+                name="SidMarcus"
+                image={staffPath+"sidmarcus.webp"}
+                rank="Chroniqueur rubrique découverte"
+                rank2=''
+                email=''
+            />
+            <StaffCard 
+                name="Nina Solaris"
+                image={staffPath+"nina_solaris.webp"}
+                rank="Présentatrice Personal Journey"
+                rank2=''
+                email=''
+            />
+        </div>  
+	<Footer />
+</Layout>
+
+<style>
+	
+</style>

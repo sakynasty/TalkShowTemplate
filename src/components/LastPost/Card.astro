@@ -11,7 +11,7 @@ const { image, title, resume, link } = Astro.props;
 
 <a href={link} title={title} rel="noopener">
     <div class="relative group max-w-sm bg-white rounded-lg shadow mb-5 mr-5">
-        <img class="rounded-t-lg" src={image} alt={title+"'s Card Image"} />
+        <img class="rounded-t-lg" src={image} alt={title+"'s Card Image"} draggable="false" />
         <div
         class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full">
         </div>
