@@ -1,7 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import FEImage from '/assets/img/personaljourney.png';
-
 var FEHead = "../assets/img/FavEmission/7c4465_d3efb1c5e8e3407f893ba17a29d0cf06f000.png";
 var FEStyle = "height:50rem; background-image: url('"+FEHead+"');";
 ---
@@ -9,7 +6,7 @@ var FEStyle = "height:50rem; background-image: url('"+FEHead+"');";
 <div class="w-full bg-cover bg-center" style={FEStyle}>
     <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
         <div class="text-center">
-            <Image src={FEImage} alt="FEImage not found" draggable="false" />
+            <img src="../assets/img/personaljourney.png" alt="FEImage not found" draggable="false" />
             <div style="font-size: 30px;" class="-mt-4r">
                 <h2>Tous les premiers Vendredi du mois</h2>
             </div>

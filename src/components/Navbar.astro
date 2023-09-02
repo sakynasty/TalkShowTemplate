@@ -1,7 +1,4 @@
 ---
-import { Image } from "astro:assets"
-import VSPLogo from "/assets/img/VSP_8.png"
-
 var classA = "hover:pb-4 hover:border-b-4 hover:border-sky-700";
 var classADropdown = "text-sm hover:bg-slate-800 dark:text-slate-100 block px-4 py-2";
 ---
@@ -9,7 +6,7 @@ var classADropdown = "text-sm hover:bg-slate-800 dark:text-slate-100 block px-4 
 <nav class="lg:px-16 px-6 dark:bg-slate-900 dark:text-slate-100 shadow-md flex flex-wrap items-center lg:py-0 py-2">
     <div class="flex-1 flex justify-between items-center">
       <a href="/" class="flex text-lg font-semibold">
-        <Image src={VSPLogo} width="105" height="50" class="p-2" alt="VSP Logo" draggable="false" />
+        <img src="../assets/img/VSP_8.png" width="105" height="50" class="p-2" alt="VSP Logo" draggable="false" />
       </a>
     </div>
     <label for="menu-toggle" class="cursor-pointer lg:hidden block dark:bg-slate-100">
