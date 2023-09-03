@@ -23,11 +23,11 @@ var classADropdown = "text-sm hover:bg-slate-800 dark:text-slate-100 block px-4 
             <a href="/" class={classA}> Accueil </a>
           </li>
           <li>
-            <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class={classA}>
+            <button id="emissionsButton" data-dropdown-toggle="emissionsHover" data-dropdown-trigger="hover" class={classA}>
                 Emissions 
             </button>
             <!-- Dropdown menu -->
-            <div id="dropdownHover" class="hidden dark:bg-slate-900 dark:text-slate-100 z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+            <div id="emissionsHover" class="hidden dark:bg-slate-900 dark:text-slate-100 z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
                 <ul class="py-1" aria-labelledby="dropdownLargeButton">
                     <li>
                         <a href="/emission/kus-talk-show" class={classADropdown}>Kus Talk Show</a>
@@ -38,15 +38,25 @@ var classADropdown = "text-sm hover:bg-slate-800 dark:text-slate-100 block px-4 
                     <li>
                         <a href="/emission/reportages" class={classADropdown}>Reportages</a>
                     </li>
-                    <li>
-                        <a href="/emission/wrong-person-bad-job" class={classADropdown}>Wrong Person, Bad Job!</a>
-                    </li>
-                    <li>
-                        <a href="/emission/lost-in-the-metaverse" class={classADropdown}>Lost in the Metaverse</a>
-                    </li>
                 </ul>
             </div>
-        </li>
+          </li>
+          <li>
+            <button id="filmsButton" data-dropdown-toggle="filmsHover" data-dropdown-trigger="hover" class={classA}>
+                Films 
+            </button>
+            <!-- Dropdown menu -->
+            <div id="filmsHover" class="hidden dark:bg-slate-900 dark:text-slate-100 z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                <ul class="py-1" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="/film/wrong-person-bad-job" class={classADropdown}>Wrong Person, Bad Job!</a>
+                </li>
+                <li>
+                    <a href="/film/lost-in-the-metaverse" class={classADropdown}>Lost in the Metaverse</a>
+                </li>
+                </ul>
+            </div>
+          </li>
           <li class="py-2 lg:py-0">
             <a href="/a-propos" class={classA}> À propos </a>
           </li>

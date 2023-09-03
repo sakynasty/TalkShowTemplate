@@ -2,6 +2,7 @@
 const response = await fetch("https://api.lanyard.rest/v1/users/1114315217640362107");
 const lanyard = await response.json();
 
+//var discordName = "Ashrilys";
 var discordName = lanyard.data.discord_user.display_name;
 ---
 

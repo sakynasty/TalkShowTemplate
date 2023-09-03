@@ -5,11 +5,12 @@ import Layout from "../../layouts/Layout.astro";
 import E_Head from "../../components/Emissions/Head.astro";
 import E_Video from "../../components/Emissions/Video.astro";
 
-var eName = "Kus Talk Show";
-var eResume = "Une émission actus et débats sur les dernières technologies.";
-var ePartner = "";
+var eName = "Lost in the Metaverse";
+var eResume = `Crow & Ryoko got lost in many universes and meet their multiversal variants. 
+Their long journey must be so bizarre! The problem approaches them and how Crow & Ryoko will handle this situation.`;
+var ePartner = "A Crow_Se7en film. In association with Helping Hands. Filmed in VRChat.";
 
-var twitch = "https://www.twitch.tv/mr_kus_t";
+var twitch = "";
 var participate = "";
 
 const video = {
@@ -24,38 +25,33 @@ const video = {
 }
 ---
 
-<Layout title={eName+" | Emissions | Virtual Show Production - Démonstration"} description="! Demonstration du nouveau code/design ce site n'est pas le réel VSP !">
+<Layout title={eName+" | Films | Virtual Show Production - Démonstration"} description="! Demonstration du nouveau code/design ce site n'est pas le réel VSP !">
     <Navbar />
     <E_Head 
-        time="Tous les premiers Samedi du mois de 21h à 23h"
+        time="Virtual Show Production x Crow_Se7en"
         name={eName}
         resume={eResume}
         twitch={twitch}
         participate={participate}
         partner={ePartner}
     />
-    <p class="text-2xl text-center align-center mt-10">Les 3 dernières sorties</p>
-    <div class="flex flex-nowrap justify-center mb-5">
+    <p class="text-2xl text-center align-center mt-10">Teaser & Trailer</p>
+    <div class="flex justify-center text-center align-center mb-5">
         <E_Video 
-            id="TWMKoet7zNM"
+            id="SrPVxbFr8bQ"
             width={video.single.width}
             height={video.single.height}
         />
         <E_Video 
-            id="uP-rjXhRNTM"
-            width={video.single.width}
-            height={video.single.height}
-        />
-        <E_Video 
-            id="uyGMNu9jELk"
+            id="Vtge5Arsedo"
             width={video.single.width}
             height={video.single.height}
         />
     </div>
-    <p class="text-2xl text-center align-center">La liste de nos anciennes sorties</p>
-    <div class="flex justify-center -ml-10 mb-14">
+    <p class="text-2xl text-center align-center">La dernière sortie</p>
+    <div class="flex flex-nowrap justify-center mb-14" style="margin-left: 5.5rem !important;">
         <E_Video 
-            multiple_id="0aqaWfhNuYk,2PlH83HE5z4,9mxZpD52o0I,g1CTRa93rwA,P_SWuaJ7bpI"
+            id="Ya6RSihkR0s"
             width={video.playlist.width}
             height={video.playlist.height}
         />
