@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
 import E_Head from "../../components/Emissions/Head.astro";
 import E_Video from "../../components/Emissions/Video.astro";
+import Partner from "../../components/Partner.astro";
 
 var eName = "Reportages";
 var eResume = "À travers ces différents reportages, vous découvrirez des communautés, des personnages, des événements qui sont en liens avec la réalité virtuelle.";
@@ -60,5 +61,6 @@ const video = {
             height={video.playlist.height}
         />
     </div>
+    <Partner />
     <Footer />
 </Layout>

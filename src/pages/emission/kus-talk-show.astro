@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
 import E_Head from "../../components/Emissions/Head.astro";
 import E_Video from "../../components/Emissions/Video.astro";
+import Partner from "../../components/Partner.astro";
 
 var eName = "Kus Talk Show";
 var eResume = "Une émission actus et débats sur les dernières technologies.";
@@ -60,5 +61,6 @@ const video = {
             height={video.playlist.height}
         />
     </div>
+    <Partner />
     <Footer />
 </Layout>

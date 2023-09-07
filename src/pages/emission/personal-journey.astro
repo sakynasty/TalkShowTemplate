@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
 import E_Head from "../../components/Emissions/Head.astro";
 import E_Video from "../../components/Emissions/Video.astro";
+import Partner from "../../components/Partner.astro";
 
 var eName = "Personal Journey";
 var eResume = `L'émission se concentre sur les histoires de vie et les choix des invités, 
@@ -50,5 +51,6 @@ const video = {
             height={video.single.height}
         />
     </div>
+    <Partner />
     <Footer />
 </Layout>
