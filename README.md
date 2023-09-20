@@ -2,18 +2,18 @@
 
 Install & Launch Dev Server
 ```cmd
-git clone https://github.com/byFrench/vsp-demo
-cd vsp-demo
+git clone https://github.com/byFrench/VSPRework
+cd VSPRework
 npm i
 npm run dev
 ```
 
-[![Open in StackBlitz](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/byFrench/vsp-demo/tree/main)
-[![Open in GitHub Codespaces](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/vsp-demo)
+[![Open in StackBlitz](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/byFrench/VSPRework/tree/main)
+[![Open in GitHub Codespaces](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/VSPRework)
 
-> 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/byFrench/vsp-demo/tree/main/r.md_assets/vsp-compare/)
+> 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/byFrench/VSPRework/tree/main/r.md_assets/vsp-compare/)
 
-![new-homepage](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
+![new-homepage](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/vsp-compare/rework-by-me/VSPRework-2023-09-20-20_50_35.png?raw=true)
 
 ## 🚀 Project Structure
 
