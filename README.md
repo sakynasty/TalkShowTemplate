@@ -1,40 +1,81 @@
-# Astro Starter Kit: Basics
+# Virtual Show Production Rework Demo
 
+Install & Launch Dev Server
+```cmd
+git clone https://github.com/Ashrilys/vsp-demo
+cd vsp-demo
+npm i
+npm run dev
 ```
-npm create astro@latest -- --template basics
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![Open in StackBlitz](https://github.com/Ashrilys/vsp-demo/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/Ashrilys/vsp-demo/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://github.com/Ashrilys/vsp-demo/blob/main/r.md_assets/launch/codesandbox.svg?raw=true)](https://codesandbox.io/p/sandbox/Ashrilys/withastro/vsp-demo/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/Ashrilys/vsp-demo/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/Ashrilys/vsp-demo?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/Ashrilys/vsp-demo/blob/main/r.md_assets/vsp-compare/)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+![new-homepage](https://github.com/Ashrilys/vsp-demo/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of my Astro project for VSP, you'll see the following folders and files:
 
 ```
 /
 ├── public/
-│   └── favicon.svg
+│   ├── assets/
+│	│	└── img/
+│	│		├── FavEmission/ # Link to FavEmission Component
+│	│		│	└── *.png-jpg 
+│	│		├── HeadImage/ # Link to HeadImage Component
+│	│		│	└── *.png-jpg 
+│	│		├── JoinSocial/ # Link to JoinSocial Component
+│	│		│	└── *.png-jpg 
+│	│		├── LastPost/ # Link to LastPost Component
+│	│		│	└── *.png-jpg 
+│	│		├── Partner/ # Link to Partner Component
+│	│		│	└── *.png-jpg
+│	│		└── Staff/ # Link to Staff Component
+│	│			└── *.webp
+│	├── fakeAPI/
+│	│	└── lastPost.json # Fake API for LastPost Component
+│	└── favicon.svg
 ├── src/
+│	├── assets/
+│	│	└── js/*.js
 │   ├── components/
-│   │   └── Card.astro
+│	│	├── Emissions/
+│	│	│	├── Head.astro
+│	│	│	└── Video.astro
+│	│	├── LastPost/ # Link to LastPost Component
+│	│	│	└── Card.astro
+│	│	├── AboutVSP.astro
+│	│	├── FavEmission.astro
+│	│	├── Footer.astro
+│	│	├── HeadImage.astro
+│	│	├── LastPost.astro 
+│	│	├── Navbar.astro
+│	│	├── Partner.astro
+│   │   └── StaffCard.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
+│		├── emission/
+│		│	├── kus-talk-show.astro
+│		│	├── personal-journey.astro
+│		│	└── reportages.astro
+│		├── film/
+│		│	├── lost-in-the-metaverse.astro
+│		│	└── wrong-person-bad-job.astro
+│		├── participer/
+│		│	└── personal-journey.astro
+│		├── a-propos.astro
+│		├── contact.astro
 │       └── index.astro
+├── astro.config.mjs
+├── tailwind.config.cjs
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -43,7 +84,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
 | `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
@@ -51,4 +92,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to check [Astro documentation](https://docs.astro.build) or contact me for help.
