@@ -56,13 +56,13 @@ Inside of my Astro project for VSP, you'll see the following folders and files:
 │   │    ├── LastPost.astro 
 │   │    ├── Navbar.astro
 │   │    ├── Partner.astro
-│   │   └── StaffCard.astro
+│   │    └── StaffCard.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│    ├── emission/
-│    │  ├── kus-talk-show.astro
-│    │  ├── personal-journey.astro
+│       ├── emission/
+│       │  ├── kus-talk-show.astro
+│       │  ├── personal-journey.astro
 │       │  └── reportages.astro
 │       ├── film/
 │       │   ├── lost-in-the-metaverse.astro
