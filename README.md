@@ -24,53 +24,53 @@ Inside of my Astro project for VSP, you'll see the following folders and files:
 /
 ├── public/
 │   ├── assets/
-│	│	└── img/
-│	│		├── FavEmission/ # Link to FavEmission Component
-│	│		│	└── *.png-jpg 
-│	│		├── HeadImage/ # Link to HeadImage Component
-│	│		│	└── *.png-jpg 
-│	│		├── JoinSocial/ # Link to JoinSocial Component
-│	│		│	└── *.png-jpg 
-│	│		├── LastPost/ # Link to LastPost Component
-│	│		│	└── *.png-jpg 
-│	│		├── Partner/ # Link to Partner Component
-│	│		│	└── *.png-jpg
-│	│		└── Staff/ # Link to Staff Component
-│	│			└── *.webp
-│	├── fakeAPI/
-│	│	└── lastPost.json # Fake API for LastPost Component
-│	└── favicon.svg
+│   │    └── img/
+│   │        ├── FavEmission/ # Link to FavEmission Component
+│   │        │   └── *.png-jpg 
+│   │        ├── HeadImage/ # Link to HeadImage Component
+│   │        │   └── *.png-jpg 
+│   │        ├── JoinSocial/ # Link to JoinSocial Component
+│   │        │   └── *.png-jpg 
+│   │        ├── LastPost/ # Link to LastPost Component
+│   │        │   └── *.png-jpg 
+│   │        ├── Partner/ # Link to Partner Component
+│   │        │   └── *.png-jpg
+│   │        └── Staff/ # Link to Staff Component
+│   │        └── *.webp
+│   ├── fakeAPI/ # Fake API for LastPost Component
+│   │   └── lastPost.json 
+│   └── favicon.svg
 ├── src/
-│	├── assets/
-│	│	└── js/*.js
+│   ├── assets/
+│   │    └── js/*.js
 │   ├── components/
-│	│	├── Emissions/
-│	│	│	├── Head.astro
-│	│	│	└── Video.astro
-│	│	├── LastPost/ # Link to LastPost Component
-│	│	│	└── Card.astro
-│	│	├── AboutVSP.astro
-│	│	├── FavEmission.astro
-│	│	├── Footer.astro
-│	│	├── HeadImage.astro
-│	│	├── LastPost.astro 
-│	│	├── Navbar.astro
-│	│	├── Partner.astro
+│   │    ├── Emissions/
+│   │    │    ├── Head.astro
+│   │    │    └── Video.astro
+│   │    ├── LastPost/ # Link to LastPost Component
+│   │    │    └── Card.astro
+│   │    ├── AboutVSP.astro
+│   │    ├── FavEmission.astro
+│   │    ├── Footer.astro
+│   │    ├── HeadImage.astro
+│   │    ├── LastPost.astro 
+│   │    ├── Navbar.astro
+│   │    ├── Partner.astro
 │   │   └── StaffCard.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│		├── emission/
-│		│	├── kus-talk-show.astro
-│		│	├── personal-journey.astro
-│		│	└── reportages.astro
-│		├── film/
-│		│	├── lost-in-the-metaverse.astro
-│		│	└── wrong-person-bad-job.astro
-│		├── participer/
-│		│	└── personal-journey.astro
-│		├── a-propos.astro
-│		├── contact.astro
+│    ├── emission/
+│    │  ├── kus-talk-show.astro
+│    │  ├── personal-journey.astro
+│       │  └── reportages.astro
+│       ├── film/
+│       │   ├── lost-in-the-metaverse.astro
+│       │   └── wrong-person-bad-job.astro
+│       ├── participer/
+│       │   └── personal-journey.astro
+│       ├── a-propos.astro
+│       ├── contact.astro
 │       └── index.astro
 ├── astro.config.mjs
 ├── tailwind.config.cjs
