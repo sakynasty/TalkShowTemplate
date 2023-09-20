@@ -8,9 +8,8 @@ npm i
 npm run dev
 ```
 
-[![Open in StackBlitz](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/byFrench/vsp-demo/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/codesandbox.svg?raw=true)](https://codesandbox.io/p/sandbox/byFrench/withastro/vsp-demo/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/vsp-demo?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![Open in StackBlitz](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/byFrench/vsp-demo/tree/main)
+[![Open in GitHub Codespaces](https://github.com/byFrench/vsp-demo/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/vsp-demo)
 
 > 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/byFrench/vsp-demo/tree/main/r.md_assets/vsp-compare/)
 
