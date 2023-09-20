@@ -3,15 +3,16 @@ interface Props {
 	name: string;
     image: string;
     rank: string;
-    email: string;
-    rank2: string;
+    email?: string;
+    rank2?: string;
 }
 
 const { image, name, rank, email, rank2 } = Astro.props;
+var staffPath = "../assets/img/Staff/";
 ---
 
 <div class="text-center text-gray-500 dark:text-gray-400">
-    <img class="mx-auto mb-4 w-36 h-36 grayscale" src={image} alt={name+'s Avatar'} draggable="false">
+    <img class="mx-auto mb-4 w-36 h-36 grayscale" src={staffPath+image} alt={name+'s Avatar'} draggable="false">
     <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {name}
     </h3>

@@ -4,8 +4,6 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import StaffCard from '../components/StaffCard.astro';
 import Partner from '../components/Partner.astro';
-
-var staffPath = "../assets/img/staff/";
 ---
 
 <Layout title="À propos | Virtual Show Production - Démonstration" description="! Demonstration du nouveau code/design ce site n'est pas le réel VSP !">
@@ -73,52 +71,43 @@ var staffPath = "../assets/img/staff/";
         <div class="grid gap-3 lg:gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
             <StaffCard 
                 name="Mr Kus"
-                image={staffPath+"kuss.webp"}
+                image="kuss.webp"
                 rank="Directeur de production"
                 email="m.huguet@virtualshowproduction.com"
-                rank2=''
             />
             <StaffCard 
                 name="Saturniaa"
-                image={staffPath+"saturniaa.webp"}
+                image="saturniaa.webp"
                 rank="Directrice adjointe de production"
                 rank2="Chroniqueuse rubrique découverte"
                 email="saturniaa@virtualshowproduction.com"
             />
             <StaffCard 
                 name="Ranily"
-                image={staffPath+"ranily.webp"}
+                image="ranily.webp"
                 rank="Directeur Technique"
                 rank2="Régisseur Multimédia"
                 email="contact@virtualshowproduction.com"
             />
             <StaffCard 
                 name="Scarabée"
-                image={staffPath+"scarabee.webp"}
+                image="scarabee.webp"
                 rank="Régisseur Caméra"
-                rank2=''
-                email=''
             />
             <StaffCard 
                 name="CréaCube"
-                image={staffPath+"creacube.webp"}
+                image="creacube.webp"
                 rank="Chroniqueur rubrique Infos"
-                rank2=''
-                email=''
             />
             <StaffCard 
                 name="SidMarcus"
-                image={staffPath+"sidmarcus.webp"}
+                image="sidmarcus.webp"
                 rank="Chroniqueur rubrique découverte"
-                rank2=''
-                email=''
             />
             <StaffCard 
                 name="Nina Solaris"
-                image={staffPath+"nina_solaris.webp"}
+                image="nina_solaris.webp"
                 rank="Présentatrice Personal Journey"
-                rank2=''
-                email=''
             />
         </div>
         <Partner /> 
