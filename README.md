@@ -13,7 +13,7 @@ npm run dev
 
 > 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/byFrench/VSPRework/tree/main/r.md_assets/vsp-compare/)
 
-![new-homepage](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/vsp-compare/rework-by-me/VSPRework-2023-09-20-20_50_35.png?raw=true)
+![new-homepage](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
 
 ## 🚀 Project Structure
 
