@@ -8,7 +8,7 @@ npm i
 npm run dev
 ```
 
-[![Open in StackBlitz](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/byFrench/VSPRework/tree/main)
+[![Open in StackBlitz](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/Ranily57/VSPRework/tree/main)
 [![Open in GitHub Codespaces](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/VSPRework)
 
 > 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/byFrench/VSPRework/tree/main/r.md_assets/vsp-compare/)
