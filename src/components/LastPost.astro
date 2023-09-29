@@ -2,7 +2,7 @@
 import Card from './LastPost/Card.astro';
 
 var imagesFolder = '../assets/img/LastPost/';
-var baseAPI = "https://vsp-demo.pages.dev/fakeAPI/lastPost.json";
+var baseAPI = Astro.url.origin+"/fakeAPI/lastPost.json";
 
 const post = await fetch(baseAPI);
 const _post = await post.json();
