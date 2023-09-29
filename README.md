@@ -12,6 +12,10 @@ npm i
 npm run dev
 ```
 
+Check which adapter is right for you in production mode with the [Astro Guides: Deploy](https://docs.astro.build/guides/deploy/).
+
+Warning: If you don't need [Astro's server side](https://docs.astro.build/guides/server-side-rendering/) or "hybrid" mode, change "server"/"hybrid" to "static".
+
 [![Open in StackBlitz](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/edit/vsprework?file=README.md)
 [![Open in GitHub Codespaces](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/VSPRework)
 
