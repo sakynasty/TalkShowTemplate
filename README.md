@@ -1,5 +1,9 @@
-# Virtual Show Production Rework Demo
+# Virtual Show Production Rework
 
+## 🚧 Important notice
+Everyone has the right to use the code of the repo "VSPRework" by [@byFrench](https://github.com/byFrench) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
+
+## 👀 Launch & Demo 
 Install & Launch Dev Server
 ```cmd
 git clone https://github.com/byFrench/VSPRework
