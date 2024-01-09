@@ -1,12 +1,12 @@
 # Virtual Show Production Rework
 
 ## 🚧 Important notice
-Everyone has the right to use the code of the repo "VSPRework" by [@byFrench](https://github.com/byFrench) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
+Everyone has the right to use the code of the repo "VSPRework" by [@sakyblume](https://github.com/sakyblume) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
 
 ## 👀 Launch & Demo 
 Install & Launch Dev Server
 ```cmd
-git clone https://github.com/byFrench/VSPRework
+git clone https://github.com/sakyblume/VSPRework
 cd VSPRework
 npm i
 npm run dev
@@ -16,12 +16,12 @@ Check which adapter is right for you in production mode with the [Astro Guides: 
 
 Warning: If you don't need [Astro's server side](https://docs.astro.build/guides/server-side-rendering/) or "hybrid" mode, change "server"/"hybrid" to "static".
 
-[![Open in StackBlitz](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/edit/vsprework?file=README.md)
-[![Open in GitHub Codespaces](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/byFrench/VSPRework)
+[![Open in StackBlitz](https://github.com/sakyblume/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/sakyblume/VSPRework?file=README.md)
+[![Open in GitHub Codespaces](https://github.com/sakyblume/VSPRework/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/sakyblume/VSPRework)
 
-> 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/byFrench/VSPRework/tree/main/r.md_assets/vsp-compare/)
+> 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/sakyblume/VSPRework/tree/main/r.md_assets/vsp-compare/)
 
-![new-homepage](https://github.com/byFrench/VSPRework/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
+![new-homepage](https://github.com/sakyblume/VSPRework/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
 
 ## 🚀 Project Structure
 
