@@ -1,0 +1,25 @@
+---
+interface Props {
+	title: string;
+    image: string;
+    resume: string;
+    link: string;
+}
+
+const { image, title, resume, link } = Astro.props;
+---
+
+<a href={link} title={title} rel="noopener">
+    <div class="relative group max-w-sm bg-black dark:bg-white rounded-lg shadow mb-5 mr-5">
+        <img class="rounded-t-lg" src={image} alt={title+"'s Card Image"} draggable="false" />
+        <div
+        class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-100 via-gray-100 dark:from-gray-800 dark:via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full">
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full flex justify-center items-center opacity-0 hover:opacity-100">
+        <div class="flex-row text-center container mx-auto px-4">
+            <h1 class="text-gray-950 dark:text-gray-50 font-bold text-lg">{title}</h1>
+            <p class="text-gray-800 dark:text-gray-200 font-medium text-sm">{resume}</p>      
+        </div>
+        </div>
+    </div>
+</a>

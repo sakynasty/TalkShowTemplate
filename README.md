@@ -1,13 +1,16 @@
-# Virtual Show Production Rework
+# Template for Talk Shows / Programs & Films
 
 ## 🚧 Important notice
-Everyone has the right to use the code of the repo "VSPRework" by [@Sakynasty](https://github.com/sakynasty) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
 
-## 👀 Launch & Demo 
+Everyone has the right to use the code of the repo "TalkShowTemplate" by [@Sakynasty](https://github.com/sakynasty) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
+
+## 👀 Launch & Demo
+
 Install & Launch Dev Server
+
 ```cmd
-git clone https://github.com/sakynasty/VSPRework
-cd VSPRework
+git clone https://github.com/sakynasty/TalkShowTemplate
+cd TalkShowTemplate
 npm i
 npm run dev
 ```
@@ -16,12 +19,12 @@ Check which adapter is right for you in production mode with the [Astro Guides: 
 
 Warning: If you don't need [Astro's server side](https://docs.astro.build/guides/server-side-rendering/) or "hybrid" mode, change "server"/"hybrid" to "static".
 
-[![Open in StackBlitz](https://github.com/sakynasty/VSPRework/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/sakynasty/VSPRework?file=README.md)
-[![Open in GitHub Codespaces](https://github.com/sakynasty/VSPRework/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/sakynasty/VSPRework)
+[![Open in StackBlitz](https://github.com/sakynasty/TalkShowTemplate/blob/main/r.md_assets/launch/stackblitz.svg?raw=true)](https://stackblitz.com/github/sakynasty/TalkShowTemplate?file=README.md)
+[![Open in GitHub Codespaces](https://github.com/sakynasty/TalkShowTemplate/blob/main/r.md_assets/launch/github-codespaces.svg?raw=true)](https://codespaces.new/sakynasty/TalkShowTemplate)
 
-> 🧑‍🚀 **Why Rework?** A breath of fresh air for the VSP! [Watch the comparison](https://github.com/sakynasty/VSPRework/tree/main/r.md_assets/vsp-compare/)
+> 🧑‍🚀 **Anecdote** This repo was originally intended as a "rework" of the VSP, but in the end, it went from VSPRework to simply a template for talk shows / programs / films. [Watch the comparison](https://github.com/sakynasty/TalkShowTemplate/tree/main/r.md_assets/vsp-compare/)
 
-![new-homepage](https://github.com/sakynasty/VSPRework/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
+![new-homepage](https://github.com/sakynasty/TalkShowTemplate/blob/main/r.md_assets/vsp-compare/rework-by-me/vsp-demo-2023-09-20-20_50_35.png?raw=true)
 
 ## 🚀 Project Structure
 
@@ -33,19 +36,19 @@ Inside of my Astro project for VSP, you'll see the following folders and files:
 │   ├── assets/
 │   │    └── img/
 │   │        ├── FavEmission/ # Link to FavEmission Component
-│   │        │   └── *.png-jpg 
+│   │        │   └── *.png-jpg
 │   │        ├── HeadImage/ # Link to HeadImage Component
-│   │        │   └── *.png-jpg 
+│   │        │   └── *.png-jpg
 │   │        ├── JoinSocial/ # Link to JoinSocial Component
-│   │        │   └── *.png-jpg 
+│   │        │   └── *.png-jpg
 │   │        ├── LastPost/ # Link to LastPost Component
-│   │        │   └── *.png-jpg 
+│   │        │   └── *.png-jpg
 │   │        ├── Partner/ # Link to Partner Component
 │   │        │   └── *.png-jpg
 │   │        └── Staff/ # Link to Staff Component
 │   │        └── *.webp
 │   ├── fakeAPI/ # Fake API for LastPost Component
-│   │   └── lastPost.json 
+│   │   └── lastPost.json
 │   └── favicon.svg
 ├── src/
 │   ├── assets/
@@ -60,7 +63,7 @@ Inside of my Astro project for VSP, you'll see the following folders and files:
 │   │    ├── FavEmission.astro
 │   │    ├── Footer.astro
 │   │    ├── HeadImage.astro
-│   │    ├── LastPost.astro 
+│   │    ├── LastPost.astro
 │   │    ├── Navbar.astro
 │   │    ├── Partner.astro
 │   │    └── StaffCard.astro

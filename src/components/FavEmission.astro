@@ -1,18 +1,21 @@
 ---
-var FEHead = "../assets/img/FavEmission/7c4465_d3efb1c5e8e3407f893ba17a29d0cf06f000.png";
+var FEImgWhite = '/assets/img/components/favemission/ase_white.png';
+var FEImgBlack = '/assets/img/components/favemission/ase_black.png';
+var FEHead = "/assets/img/components/favemission/1920x1080.svg";
 var FEStyle = "height:50rem; background-image: url('"+FEHead+"');";
 ---
 
 <div class="w-full bg-cover bg-center" style={FEStyle}>
-    <div class="flex items-center justify-center h-full w-full bg-gray-900 bg-opacity-50">
-        <div class="text-center">
-            <img src="../assets/img/personaljourney.png" alt="FEImage not found" draggable="false" />
+    <div class="flex items-center justify-center h-full w-full dark:bg-gray-900 bg-gray-100 bg-opacity-50 dark:bg-opacity-50">
+        <div class="text-center -mt-4r">
+            <img src={FEImgWhite} alt="FEImgWhite Not Found" class="dark:block hidden" draggable="false" />
+            <img src={FEImgBlack} alt="FEImgBlack Not Found" class="block dark:hidden" draggable="false" />
             <div style="font-size: 30px;" class="-mt-4r">
-                <h2>Tous les premiers Vendredi du mois</h2>
+                <h2>Every first Friday of the month</h2>
             </div>
-            <a href="https://github.com/byFrench/VSPRework" title="Personal Journey en Live" rel="noopener">
-                <button class="mt-4 px-4 py-2 bg-purple-700 dark:text-slate-100 text-sm uppercase font-medium rounded hover:bg-purple-500 focus:outline-none focus:bg-purple-500">
-                    Regarder l'émission &RightArrow;
+            <a href={import.meta.env.PUBLIC_GITHUB_URL} title="A simple Emission on Live" rel="noopener">
+                <button class="mt-4 px-4 py-2 bg-purple-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-purple-500 focus:outline-none focus:bg-purple-500">
+                    Watch the show &RightArrow;
                 </button>
             </a>
         </div>

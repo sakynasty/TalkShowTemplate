@@ -1,25 +1,146 @@
 ---
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
-import Partner from "../components/Partner.astro";
 import Layout from "../layouts/Layout.astro";
+
+const errors = { email: "", first_name: "", last_name: "", message: "" };
+if (Astro.request.method === "POST") {
+    try {
+        const dataForm = await Astro.request.formData();
+        const email = dataForm.get("email");
+        const first_name = dataForm.get("first_name");
+        const last_name = dataForm.get("last_name");
+        const message = dataForm.get("message");
+
+        if (typeof email !== "string" || email.length < 1) {
+            errors.email += "Please enter a email address.";
+        } else {
+            if (!email.includes("@") || !email.includes(".")) {
+                errors.email += "Please enter a valid email address with @ AND dot.";
+            }
+        }
+
+        if (typeof first_name !== "string" || first_name.length < 1) {
+            errors.first_name += "Please enter a first name/username.";
+        }
+
+        if (typeof last_name !== "string" || last_name.length > 1 && last_name.length < 2) {
+            errors.last_name += "Please enter a correct last name.";
+        }
+
+        if (typeof message !== "string" || message.length < 100) {
+            errors.message += "Your message must be at least 100 characters.";
+        }
+
+        const hasErrors = Object.values(errors).some(msg => msg);
+        if (!hasErrors) {
+            var colorRandom = Math.floor(Math.random()*16777215);
+            function ifLastName(last_name) {
+                let returnName;
+
+                if (last_name > 1) {
+                    returnName = last_name;
+                } else {
+                    returnName = "No last name has been filled in";
+                }
+
+                return returnName;
+            }
+            
+            const webhookBody = {
+                username: `[${import.meta.env.PUBLIC_SHORTNAME}] Contact`,
+                avatar_url: 'https://cdn.discordapp.com/attachments/1200538217468936222/1200538471878627409/contact.png',
+                content: 'A new <#1200533825869066443> has been filled in.',
+                embeds: [{
+                    title: 'New form filled in /contact',
+                    url: Astro.url,
+                    fields: [
+                        { name: 'Email address', value: email, inline: false },
+                        { name: 'First name or Nickname', value: first_name, inline: true },
+                        { name: 'Last name', value: ifLastName(last_name), inline: true },
+                        { name: 'Their message', value: message, inline: false }
+                    ],
+                    color: colorRandom,
+                    footer: {
+                        text: 'Code & Design original made by ♥ / Based on TalkShowTemplate',
+                    },
+                    timestamp: new Date()
+                }],
+            };
+
+            const webhookUrl = import.meta.env.PUBLIC_CONTACT_WEBHOOK_URL;
+
+            const response = await fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(webhookBody),
+            });
+
+            if (response.ok) {
+                console.log('[LOC](TalkShowTemplate) Contact - Webhooks Infos: I have received your message!');
+            } else {
+                console.error('[LOC](TalkShowTemplate) Contact - Webhook Error: There was an error! Try again later!');
+                console.error('[LOC](TalkShowTemplate) Contact - Webhook Error: Data is '+JSON.stringify(webhookBody));
+            }
+        }
+    }
+    catch (error) {
+        if (error instanceof Error) {
+            console.error("[LOC](TalkShowTemplate) Contact - Form Error: "+error.message);
+        }
+        console.error("[LOC](TalkShowTemplate) Contact - Form Error: "+error.message);
+    }
+}
+
+var formTextClass = "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer";
+var formInputClass = "peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6";
 ---
 
-<Layout title="Contact | Virtual Show Production - Démonstration" description="! Demonstration du nouveau code/design ce site n'est pas le réel VSP !">
-    <Navbar />
+<Layout 
+    title="Contact" 
+    description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
+    robots="noindex, nofollow"
+>
     <p class="mt-5 text-2xl text-center align-center">
-        Contactez le
+        Contact us
     </p>
-    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-slate-950 dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
         <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
-            Virtual Show Production
+            {import.meta.env.PUBLIC_NAME}
         </span>
     </h1>
-    <div class="container mx-auto max-w-2xl">
-        <p class="mt-5 align-center justify-center text-center mb-10">
-            Actuellement en développement.
-        </p>
+    <div class="container mx-auto mt-10 mb-10 max-w-2xl">
+        
+
+<form method="POST" class="max-w-md mx-auto">
+    <div class="text-sm mb-5 text-gray-500 dark:text-gray-400" id="errors">
+        {errors.email && <p>{errors.email}</p>}
+        {errors.first_name && <p>{errors.first_name}</p>}
+        {errors.last_name && <p>{errors.last_name}</p>}
+        {errors.message && <p>{errors.message}</p>}
     </div>
-    <Partner />
-    <Footer />
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="email" name="email" id="email" class={formTextClass} placeholder=" " required />
+        <label for="email" class={formInputClass}>Email address*</label>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="first_name" id="first_name" class={formTextClass} placeholder=" " required />
+          <label for="first_name" class={formInputClass}>First name or Nickname*</label>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="last_name" id="last_name" class={formTextClass} placeholder=" " />
+          <label for="last_name" class={formInputClass}>Last name</label>
+      </div>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <textarea id="message" rows="4" name="message" id="message" class={formTextClass} placeholder=" " minlength="100" required></textarea>
+        <label for="message" class={formInputClass}>Your message*</label>
+    </div>
+    <p class="text-sm mb-5 text-gray-500 dark:text-gray-400">Your personal information remains solely between you and {import.meta.env.PUBLIC_SHORTNAME}, the email address will be used to contact you as soon as possible.</p>
+    <button type="submit" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+        Submit
+    </button>
+  </form>  
+    </div>
 </Layout>

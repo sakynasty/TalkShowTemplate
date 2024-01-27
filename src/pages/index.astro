@@ -1,24 +1,24 @@
 ---
 import HeadImage from '../components/HeadImage.astro';
-import LastPost from '../components/LastPost.astro';
-import Navbar from '../components/Navbar.astro';
+import LastPost from '../components/LastPosts.astro';
 import Layout from '../layouts/Layout.astro';
 import JoinSocial from '../components/JoinSocial.astro';
-import AboutVSP from '../components/AboutVSP.astro';
+import About from '../components/About.astro';
 import FavEmission from '../components/FavEmission.astro';
-import Partner from '../components/Partner.astro';
-import Footer from '../components/Footer.astro';
+import Partners from '../components/Partners.astro';
 ---
 
-<Layout title="Accueil | Virtual Show Production - Démonstration" description="! Demonstration du nouveau code/design ce site n'est pas le réel VSP !">
-	<Navbar />
+<Layout 
+	title="Home" 
+	description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
+	robots="noindex, nofollow"
+>
 	<HeadImage />
 	<LastPost />
 	<JoinSocial />
-	<AboutVSP />
+	<About />
 	<FavEmission />
-	<Partner />
-	<Footer />
+	<Partners />
 </Layout>
 
 <style>

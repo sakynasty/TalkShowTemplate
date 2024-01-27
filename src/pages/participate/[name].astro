@@ -1,0 +1,54 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ParticipateForms from "../../components/ParticipateForms.astro";
+const { name } = Astro.params;
+
+let redirect;
+var extractedURL = Astro.url.pathname.replace("/participate/", "");
+var whitelistName = [
+    "a-simple-emission"
+];
+if (whitelistName.includes(extractedURL)) {
+    redirect = false;
+    console.log("[LOC](TalkShowTemplate) Participate: URL whitelisted !");
+} else {
+    redirect = true;
+}
+
+let beautifyName
+if (name) {
+    var Name = name.charAt(0).toUpperCase() + name.substring(1);
+    beautifyName = Name.replace(/-/g, " ");
+} else {
+    beautifyName = "No name has been defined";
+}
+
+let webhook;
+let avatar;
+let channel_id;
+if(whitelistName.includes("a-simple-emission")) {
+    webhook = "https://discord.com/api/webhooks/1200589279659823105/oChCO6aPGomqhP-a2es5BdVE_o6oyS20cWfZ9E7Jvc4kXv6dHYtuj8Rc40rzzAi43MYW";
+    avatar = "https://cdn.discordapp.com/attachments/1200538217468936222/1200589103272562809/a-simple-emission.png";
+    channel_id = "1200588939275284540";
+}
+
+---
+
+<Layout 
+    title={`${beautifyName} / Participate`} 
+    description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
+    robots="noindex, nofollow"
+    redirect={redirect}
+>
+    <p class="mt-5 text-2xl text-center align-center">
+        Apply to take part in
+    </p>
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
+        <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
+            {beautifyName}
+        </span>
+    </h1>
+    <div class="container mx-auto max-w-2xl mt-10">
+        <ParticipateForms name={beautifyName} url={Astro.url.origin+Astro.url.pathname} page={`/${name}`} webhook={webhook} avatar={avatar} channel_id={channel_id} />
+    </div>
+</Layout>
