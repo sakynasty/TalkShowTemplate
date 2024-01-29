@@ -5,7 +5,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'talkshowtemplate.pages.dev',
+	site: 'https://talkshowtemplate.pages.dev',
 	server: {
 		port: 3000
 	},
