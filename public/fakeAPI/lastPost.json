@@ -1,44 +1,44 @@
 [
-  {
-    "id": 1,
-    "title": "A simple Emission EP3",
-    "resume": "Replay of the A simple show about fake family in virtual reality.",
-    "link": "https://github.com/sakynasty/TalkShowTemplate",
-    "image_nameext": "300x400.svg"
-  },
-  {
-    "id": 2,
-    "title": "Your Talk Show #9",
-    "resume": "Replay of the July 8, 2023 program on the theme of artistic and visual fusion with guest ???.",
-    "link": "https://github.com/sakynasty/TalkShowTemplate",
-    "image_nameext": "300x400.svg"
-  },
-  {
-    "id": 3,
-    "title": "A simple Emission EP2",
-    "resume": "Replay of the A simple show about ERP (sex) in virtual reality.",
-    "link": "https://github.com/sakynasty/TalkShowTemplate",
-    "image_nameext": "300x400.svg"
-  },
-  {
-    "id": 4,
-    "title": "Your Talk Show #8",
-    "resume": "Replay of the March 10, 2023 show on the theme of love on the Internet with guest ???.",
-    "link": "https://github.com/sakynasty/TalkShowTemplate",
-    "image_nameext": "300x400.svg"
-  },
-  {
-    "id": 5,
-    "title": "A simple Emission EP1",
-    "resume": "Replay of the A simple show about relationships in virtual reality.",
-    "link": "https://github.com/sakynasty/TalkShowTemplate",
-    "image_nameext": "300x400.svg"
-  },
-  {
-    "id": 6,
-    "title": "Your Talk Show #7",
-    "resume": "Replay of the February 10, 2023 show on the theme of VRChat with guest ???.",
-    "link": "https://github.com/sakynasty/TalkShowTemplate",
-    "image_nameext": "300x400.svg"
-  }
+	{
+		"id": 1,
+		"title": "A simple Emission EP3",
+		"resume": "Replay of the A simple show about fake family in virtual reality.",
+		"link": "https://github.com/sakynasty/TalkShowTemplate",
+		"image_nameext": "300x400.svg"
+	},
+	{
+		"id": 2,
+		"title": "Your Talk Show #9",
+		"resume": "Replay of the July 8, 2023 program on the theme of artistic and visual fusion with guest ???.",
+		"link": "https://github.com/sakynasty/TalkShowTemplate",
+		"image_nameext": "300x400.svg"
+	},
+	{
+		"id": 3,
+		"title": "A simple Emission EP2",
+		"resume": "Replay of the A simple show about ERP (sex) in virtual reality.",
+		"link": "https://github.com/sakynasty/TalkShowTemplate",
+		"image_nameext": "300x400.svg"
+	},
+	{
+		"id": 4,
+		"title": "Your Talk Show #8",
+		"resume": "Replay of the March 10, 2023 show on the theme of love on the Internet with guest ???.",
+		"link": "https://github.com/sakynasty/TalkShowTemplate",
+		"image_nameext": "300x400.svg"
+	},
+	{
+		"id": 5,
+		"title": "A simple Emission EP1",
+		"resume": "Replay of the A simple show about relationships in virtual reality.",
+		"link": "https://github.com/sakynasty/TalkShowTemplate",
+		"image_nameext": "300x400.svg"
+	},
+	{
+		"id": 6,
+		"title": "Your Talk Show #7",
+		"resume": "Replay of the February 10, 2023 show on the theme of VRChat with guest ???.",
+		"link": "https://github.com/sakynasty/TalkShowTemplate",
+		"image_nameext": "300x400.svg"
+	}
 ]

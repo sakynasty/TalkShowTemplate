@@ -1,29 +1,43 @@
 ---
 var FEImgWhite = '/assets/img/components/favemission/ase_white.png';
 var FEImgBlack = '/assets/img/components/favemission/ase_black.png';
-var FEHead = "/assets/img/components/favemission/1920x1080.svg";
-var FEStyle = "height:50rem; background-image: url('"+FEHead+"');";
+var FEHead = '/assets/img/components/favemission/1920x1080.svg';
+var FEStyle = "height:50rem; background-image: url('" + FEHead + "');";
 ---
 
 <div class="w-full bg-cover bg-center" style={FEStyle}>
-    <div class="flex items-center justify-center h-full w-full dark:bg-gray-900 bg-gray-100 bg-opacity-50 dark:bg-opacity-50">
-        <div class="text-center -mt-4r">
-            <img src={FEImgWhite} alt="FEImgWhite Not Found" class="dark:block hidden" draggable="false" />
-            <img src={FEImgBlack} alt="FEImgBlack Not Found" class="block dark:hidden" draggable="false" />
-            <div style="font-size: 30px;" class="-mt-4r">
-                <h2>Every first Friday of the month</h2>
-            </div>
-            <a href={import.meta.env.PUBLIC_GITHUB_URL} title="A simple Emission on Live" rel="noopener">
-                <button class="mt-4 px-4 py-2 bg-purple-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-purple-500 focus:outline-none focus:bg-purple-500">
-                    Watch the show &RightArrow;
-                </button>
-            </a>
-        </div>
-    </div>
+	<div
+		class="flex items-center justify-center h-full w-full dark:bg-gray-900 bg-gray-100 bg-opacity-50 dark:bg-opacity-50"
+	>
+		<div class="text-center -mt-4r">
+			<img
+				src={FEImgWhite}
+				alt="FEImgWhite Not Found"
+				class="dark:block hidden"
+				draggable="false"
+			/>
+			<img
+				src={FEImgBlack}
+				alt="FEImgBlack Not Found"
+				class="block dark:hidden"
+				draggable="false"
+			/>
+			<div style="font-size: 30px;" class="-mt-4r">
+				<h2>Every first Friday of the month</h2>
+			</div>
+			<a href={import.meta.env.PUBLIC_GITHUB_URL} title="A simple Emission on Live" rel="noopener">
+				<button
+					class="mt-4 px-4 py-2 bg-purple-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-purple-500 focus:outline-none focus:bg-purple-500"
+				>
+					Watch the show &RightArrow;
+				</button>
+			</a>
+		</div>
+	</div>
 </div>
 
 <style>
-    .-mt-4r {
-        margin-top: -4rem;
-    }
+	.-mt-4r {
+		margin-top: -4rem;
+	}
 </style>

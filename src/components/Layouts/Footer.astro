@@ -1,20 +1,29 @@
 ---
-    let currentDate = new Date();
-	var currentYear = currentDate.getFullYear();
+let currentDate = new Date();
+var currentYear = currentDate.getFullYear();
 ---
 
 <footer class="dark:bg-slate-900 dark:text-slate-100">
-    <div class="px-4 py-6 dark:bg-slate-900 dark:text-slate-100 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-            {currentYear} &copy; <a href="/" title={import.meta.env.PUBLIC_SHORTNAME} rel="noopener">{import.meta.env.PUBLIC_NAME}</a> ({import.meta.env.PUBLIC_SHORTNAME}) / 
-            All rights are reserved to their respective owners.
-        </span>
-        <div class="flex mt-4 space-x-5 sm:justify-center md:mt-0 text-xs text-slate-300 dark:text-slate-700">
-            <p>
-                Code & Design original made by &hearts; / Based on 
-                <a href="https://github.com/sakynasty/TalkShowTemplate" title="GitHub's Link" rel="noopener" target="_blank">TalkShowTemplate</a>
-            </p>
-        </div>
-      </div>
-    </div>
+	<div
+		class="px-4 py-6 dark:bg-slate-900 dark:text-slate-100 md:flex md:items-center md:justify-between"
+	>
+		<span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
+			{currentYear} &copy; <a href="/" title={import.meta.env.PUBLIC_SHORTNAME} rel="noopener"
+				>{import.meta.env.PUBLIC_NAME}</a
+			> ({import.meta.env.PUBLIC_SHORTNAME}) / All rights are reserved to their respective owners.
+		</span>
+		<div
+			class="flex mt-4 space-x-5 sm:justify-center md:mt-0 text-xs text-slate-300 dark:text-slate-700"
+		>
+			<p>
+				Code & Design original made by &hearts; / Based on
+				<a
+					href="https://github.com/sakynasty/TalkShowTemplate"
+					title="GitHub's Link"
+					rel="noopener"
+					target="_blank">TalkShowTemplate</a
+				>
+			</p>
+		</div>
+	</div>
 </footer>

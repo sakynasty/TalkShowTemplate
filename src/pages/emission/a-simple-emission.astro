@@ -1,56 +1,48 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import E_Head from "../../components/Emissions/Head.astro";
-import E_Video from "../../components/Emissions/Video.astro";
-import Partners from "../../components/Partners.astro";
+import Layout from '../../layouts/Layout.astro';
+import E_Head from '../../components/Emissions/Head.astro';
+import E_Video from '../../components/Emissions/Video.astro';
+import Partners from '../../components/Partners.astro';
 
-var eName = "A simple Emission";
+var eName = 'A simple Emission';
 var eResume = `The show focuses on the guests' life stories and choices, 
 often touching on social issues, fashion, beauty, relationships and more. 
 Guests are invited to share their views and make personal choices on a variety of topics. 
-The format is interactive and lively.`
-var ePartner = "";
+The format is interactive and lively.`;
+var ePartner = '';
 
 var twitch = import.meta.env.PUBLIC_GITHUB_URL;
-var participate = "/participate/a-simple-emission";
+var participate = '/participate/a-simple-emission';
 
 const video = {
-    single: {
-        width: "450",
-        height: "300"
-    },
-    playlist: {
-        width: "600",
-        height: "350"
-    }
-}
+	single: {
+		width: '450',
+		height: '300'
+	},
+	playlist: {
+		width: '600',
+		height: '350'
+	}
+};
 ---
 
-<Layout 
-    title={eName+" / Emissions"} 
-    description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
-    robots="noindex, nofollow"
+<Layout
+	title={eName + ' / Emissions'}
+	description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
+	robots="noindex, nofollow"
 >
-    <E_Head 
-        time="Every first Friday of the month"
-        name={eName}
-        resume={eResume}
-        twitch={twitch}
-        participate={participate}
-        partner={ePartner}
-    />
-    <p class="text-2xl text-center align-center mt-10">Latest 2 releases</p>
-    <div class="flex flex-nowrap justify-center mb-15 ml-5">
-        <E_Video 
-            id="o7TQzcODnio"
-            width={video.single.width}
-            height={video.single.height}
-        />
-        <E_Video 
-            id="o7TQzcODnio"
-            width={video.single.width}
-            height={video.single.height}
-        />
-    </div>
-    <Partners />
+	<E_Head
+		time="Every first Friday of the month"
+		name={eName}
+		resume={eResume}
+		twitch={twitch}
+		participate={participate}
+		partner={ePartner}
+	/>
+	<p class="text-2xl text-center align-center mt-10">Latest 2 releases</p>
+	<div class="flex flex-nowrap justify-center mb-15 ml-5">
+		<E_Video id="o7TQzcODnio" width={video.single.width} height={video.single.height} />
+		<E_Video id="o7TQzcODnio" width={video.single.width} height={video.single.height} />
+	</div>
+	<Partners />
 </Layout>

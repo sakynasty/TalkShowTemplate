@@ -1,60 +1,75 @@
 ---
 interface Props {
 	time?: string;
-    name: string;
-    twitch: string;
-    participate?: string;
-    resume: string;
-    partner?: string;
+	name: string;
+	twitch: string;
+	participate?: string;
+	resume: string;
+	partner?: string;
 }
 
 const { name, time, twitch, participate, resume, partner } = Astro.props;
 ---
 
 <p class="mt-5 text-2xl text-center align-center">
-{time ? (
-    time
-) : (
-    import.meta.env.PUBLIC_NAME
-)}
+	{time ? time : import.meta.env.PUBLIC_NAME}
 </p>
 
-<h1 class="text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
-    <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
-        {name}
-    </span>
+<h1
+	class="text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center"
+>
+	<span
+		class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700"
+	>
+		{name}
+	</span>
 </h1>
 
-{!partner ? (
-    <p class="text-center align-center mt-2 container mx-auto max-w-xl">{resume}</p>
-) : 
-    <p class="text-center align-center mt-2 container mx-auto max-w-xl">{resume}</p>
-    <p class="text-center align-center mt-2 container mx-auto max-w-xl"><b>{partner}</b></p>
+{
+	!partner ? (
+		<p class="text-center align-center mt-2 container mx-auto max-w-xl">{resume}</p>
+	) : (
+		<>
+			<p class="text-center align-center mt-2 container mx-auto max-w-xl">{resume}</p>
+			<p class="text-center align-center mt-2 container mx-auto max-w-xl">
+				<b>{partner}</b>
+			</p>
+		</>
+	)
 }
 
-{!twitch ? ( null ) : null }
+{!twitch ? null : null}
 
-{twitch && !participate ? (
-    <div class="flex items-center justify-center mb-10" >
-        <a href={twitch} title={name+" on Live"} target="_blank" rel="noopener">
-            <button class="mt-4 px-4 py-2 bg-sky-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-sky-500 focus:outline-none focus:bg-sky-500">
-                Watch the show live &RightArrow;
-            </button>
-        </a>
-    </div>
-) : null}
+{
+	twitch && !participate ? (
+		<div class="flex items-center justify-center mb-10">
+			<a href={twitch} title={name + ' on Live'} target="_blank" rel="noopener">
+				<button class="mt-4 px-4 py-2 bg-sky-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-sky-500 focus:outline-none focus:bg-sky-500">
+					Watch the show live &RightArrow;
+				</button>
+			</a>
+		</div>
+	) : null
+}
 
-{participate && twitch ? (
-    <div class="flex items-center justify-center mb-10" >
-        <a href={twitch} title={name+" on Live"} rel="noopener" target="_blank" class="mr-5">
-            <button class="mt-4 px-4 py-2 bg-sky-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-sky-500 focus:outline-none focus:bg-sky-500">
-                Watch the show live &RightArrow;
-            </button>
-        </a>
-        <a href={participate} title={"Apply to take part in the "+name} target="_blank" rel="noopener">
-            <button class="mt-4 px-4 py-2 bg-red-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-red-500 focus:outline-none focus:bg-red-500">
-                Apply to take part &RightArrow;
-            </button>
-        </a>
-    </div>
-) : null}
+{
+	participate && twitch ? (
+		<div class="flex items-center justify-center mb-10">
+			<a href={twitch} title={name + ' on Live'} rel="noopener" target="_blank" class="mr-5">
+				<button class="mt-4 px-4 py-2 bg-sky-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-sky-500 focus:outline-none focus:bg-sky-500">
+					Watch the show live &RightArrow;
+				</button>
+			</a>
+			<a
+				href={participate}
+				title={'Apply to take part in the ' + name}
+				target="_blank"
+				rel="noopener"
+			>
+				<button class="mt-4 px-4 py-2 bg-red-700 dark:text-slate-100 text-slate-100 text-sm uppercase font-medium rounded hover:bg-red-500 focus:outline-none focus:bg-red-500">
+					Apply to take part &RightArrow;
+				</button>
+			</a>
+		</div>
+	) : null
+}

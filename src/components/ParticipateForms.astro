@@ -1,115 +1,161 @@
 ---
 interface Props {
 	name: string;
-    url: string;
-    page: string;
+	url: string;
+	page: string;
 	webhook: string;
-    channel_id: string;
-    avatar: string;
+	channel_id: string;
+	avatar: string;
 }
 
 const { name, url, page, webhook, channel_id, avatar } = Astro.props;
 
-const errors = { discord: "", reason: "", apply: "" };
-if (Astro.request.method === "POST") {
-    try {
-        const dataForm = await Astro.request.formData();
-        const discord = dataForm.get("discord");
-        const reason = dataForm.get("reason");
-        const apply = dataForm.get("apply");
+const errors = { discord: '', reason: '', apply: '' };
+if (Astro.request.method === 'POST') {
+	try {
+		const dataForm = await Astro.request.formData();
+		const discord = dataForm.get('discord');
+		const reason = dataForm.get('reason');
+		const apply = dataForm.get('apply');
 
-        if (typeof discord !== "string" || discord.length < 1) {
-            errors.discord += "Please enter a Discord.";
-        }
+		if (typeof discord !== 'string' || discord.length < 1) {
+			errors.discord += 'Please enter a Discord.';
+		}
 
-        if (typeof reason !== "string" || reason.length < 20) {
-            errors.reason += "Your apply must be at least 20 characters or not valid.";
-        }
+		if (typeof reason !== 'string' || reason.length < 20) {
+			errors.reason += 'Your apply must be at least 20 characters or not valid.';
+		}
 
-        if (typeof apply !== "string" || apply.length < 100) {
-            errors.apply += "Your apply must be at least 100 characters or not valid.";
-        }
+		if (typeof apply !== 'string' || apply.length < 100) {
+			errors.apply += 'Your apply must be at least 100 characters or not valid.';
+		}
 
-        const hasErrors = Object.values(errors).some(msg => msg);
-        if (!hasErrors) {
-            var colorRandom = Math.floor(Math.random()*16777215);
-        
-            const webhookBody = {
-                username: `[${import.meta.env.PUBLIC_SHORTNAME}] ${name}`,
-                avatar_url: avatar,
-                content: `A new <#${channel_id}> has been filled in.`,
-                embeds: [{
-                    title: 'New form filled in '+page,
-                    url: url,
-                    fields: [
-                        { name: 'Discord', value: discord, inline: false },
-                        { name: 'Reason / Why me ?', value: reason, inline: false },
-                        { name: 'Their apply', value: apply, inline: false }
-                    ],
-                    color: colorRandom,
-                    footer: {
-                        text: 'Code & Design original made by ♥ / Based on TalkShowTemplate',
-                    },
-                    timestamp: new Date()
-                }],
-            };
+		const hasErrors = Object.values(errors).some((msg) => msg);
+		if (!hasErrors) {
+			var colorRandom = Math.floor(Math.random() * 16777215);
 
-            const webhookUrl = webhook;
+			const webhookBody = {
+				username: `[${import.meta.env.PUBLIC_SHORTNAME}] ${name}`,
+				avatar_url: avatar,
+				content: `A new <#${channel_id}> has been filled in.`,
+				embeds: [
+					{
+						title: 'New form filled in ' + page,
+						url: url,
+						fields: [
+							{ name: 'Discord', value: discord, inline: false },
+							{ name: 'Reason / Why me ?', value: reason, inline: false },
+							{ name: 'Their apply', value: apply, inline: false }
+						],
+						color: colorRandom,
+						footer: {
+							text: 'Code & Design original made by ♥ / Based on TalkShowTemplate'
+						},
+						timestamp: new Date()
+					}
+				]
+			};
 
-            const response = await fetch(webhookUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(webhookBody),
-            });
+			const webhookUrl = webhook;
 
-            if (response.ok) {
-                console.log('[LOC](TalkShowTemplate) '+name+' - Webhooks Infos: I have received your message!');
-            } else {
-                console.error('[LOC](TalkShowTemplate) '+name+' - Webhook Error: There was an error! Try again later!');
-                console.error('[LOC](TalkShowTemplate) '+name+' - Webhook Error: Data is '+JSON.stringify(webhookBody));
-            }
-        }
-    }
-    catch (error) {
-        if (error instanceof Error) {
-            console.error("[LOC](TalkShowTemplate) "+name+" - Form Error: "+error.message);
-        }
-        console.error("[LOC](TalkShowTemplate) "+name+" - Form Error: "+error.message);
-    }
+			const response = await fetch(webhookUrl, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(webhookBody)
+			});
+
+			if (response.ok) {
+				console.log(
+					'[LOC](TalkShowTemplate) ' + name + ' - Webhooks Infos: I have received your message!'
+				);
+			} else {
+				console.error(
+					'[LOC](TalkShowTemplate) ' +
+						name +
+						' - Webhook Error: There was an error! Try again later!'
+				);
+				console.error(
+					'[LOC](TalkShowTemplate) ' +
+						name +
+						' - Webhook Error: Data is ' +
+						JSON.stringify(webhookBody)
+				);
+			}
+		}
+	} catch (error) {
+		if (error instanceof Error) {
+			console.error('[LOC](TalkShowTemplate) ' + name + ' - Form Error: ' + error.message);
+		}
+		console.error('[LOC](TalkShowTemplate) ' + name + ' - Form Error: ' + error.message);
+	}
 }
 
-var formTextClass = "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer";
-var formInputClass = "peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6";
+var formTextClass =
+	'block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer';
+var formInputClass =
+	'peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6';
 ---
 
 <div class="text-sm max-w-md mx-auto">
-    <p>
-        In your message (which is above all your application), as well as your reason (your "why you" as well), please give as much information as possible, such as your working hours, your age, ...
-    </p>
+	<p>
+		In your message (which is above all your application), as well as your reason (your "why you" as
+		well), please give as much information as possible, such as your working hours, your age, ...
+	</p>
 </div>
 
 <form method="POST" class="max-w-md mx-auto">
-    <div class="text-sm mb-5 mt-5 text-gray-500 dark:text-gray-400" id="errors">
-        {errors.discord && <p>{errors.discord}</p>}
-        {errors.reason && <p>{errors.reason}</p>}
-        {errors.apply && <p>{errors.apply}</p>}
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="discord" id="discord" class={formTextClass} placeholder=" " minlength="2" required />
-        <label for="discord" class={formInputClass}>Discord*</label>
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <input type="text" name="reason" id="reason" class={formTextClass} placeholder=" " minlength="20" required />
-        <label for="reason" class={formInputClass}>Reason / Why you ?*</label>
-    </div>
-    <div class="relative z-0 w-full mb-5 group">
-        <textarea id="message" rows="4" name="apply" id="apply" class={formTextClass} placeholder=" " minlength="100" required></textarea>
-        <label for="reason" class={formInputClass}>Your message*</label>
-    </div>
-    <p class="text-sm mb-5 text-gray-500 dark:text-gray-400">Your personal information remains solely between you and {import.meta.env.PUBLIC_SHORTNAME}, the email address will be used to contact you as soon as possible.</p>
-    <button type="submit" class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-        Submit
-    </button>
-  </form>  
+	<div class="text-sm mb-5 mt-5 text-gray-500 dark:text-gray-400" id="errors">
+		{errors.discord && <p>{errors.discord}</p>}
+		{errors.reason && <p>{errors.reason}</p>}
+		{errors.apply && <p>{errors.apply}</p>}
+	</div>
+	<div class="relative z-0 w-full mb-5 group">
+		<input
+			type="text"
+			name="discord"
+			id="discord"
+			class={formTextClass}
+			placeholder=" "
+			minlength="2"
+			required
+		/>
+		<label for="discord" class={formInputClass}>Discord*</label>
+	</div>
+	<div class="relative z-0 w-full mb-5 group">
+		<input
+			type="text"
+			name="reason"
+			id="reason"
+			class={formTextClass}
+			placeholder=" "
+			minlength="20"
+			required
+		/>
+		<label for="reason" class={formInputClass}>Reason / Why you ?*</label>
+	</div>
+	<div class="relative z-0 w-full mb-5 group">
+		<textarea
+			id="message"
+			rows="4"
+			name="apply"
+			id="apply"
+			class={formTextClass}
+			placeholder=" "
+			minlength="100"
+			required></textarea>
+		<label for="reason" class={formInputClass}>Your message*</label>
+	</div>
+	<p class="text-sm mb-5 text-gray-500 dark:text-gray-400">
+		Your personal information remains solely between you and {import.meta.env.PUBLIC_SHORTNAME}, the
+		email address will be used to contact you as soon as possible.
+	</p>
+	<button
+		type="submit"
+		class="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800"
+	>
+		Submit
+	</button>
+</form>
+

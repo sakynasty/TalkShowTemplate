@@ -1,15 +1,15 @@
 ---
 interface Props {
 	name: string;
-    image: string;
-    rank: string;
-    email?: string;
-    rank2?: string;
-    ghapiUser?: string;
+	image: string;
+	rank: string;
+	email?: string;
+	rank2?: string;
+	ghapiUser?: string;
 }
 
 const { image, name, rank, email, rank2, ghapiUser } = Astro.props;
-var StaffImage = '/assets/img/components/staffcard/'+image;
+var StaffImage = '/assets/img/components/staffcard/' + image;
 let Avatar;
 let Name;
 let Link;
@@ -17,48 +17,48 @@ let Title;
 let Target;
 
 if (ghapiUser) {
-    const response = await fetch('https://api.github.com/users/'+ghapiUser);
-    const data = await response.json();
+	const response = await fetch('https://api.github.com/users/' + ghapiUser);
+	const data = await response.json();
 
-    Name = data.name;
-    Avatar = data.avatar_url;
-    Link = data.html_url;
-    Title = `${data.name}'s GitHub`;
-    Target = '_blank';
+	Name = data.name;
+	Avatar = data.avatar_url;
+	Link = data.html_url;
+	Title = `${data.name}'s GitHub`;
+	Target = '_blank';
 
-    /* Delete this part before use unless you want to keep me in your list */
-    if (ghapiUser == "archiv3d") {
-        const devresponse = await fetch('https://api.github.com/users/'+data.bio.replace('@', ''));
-        const devdata = await devresponse.json();
+	/* Delete this part before use unless you want to keep me in your list */
+	if (ghapiUser == 'archiv3d') {
+		const devresponse = await fetch('https://api.github.com/users/' + data.bio.replace('@', ''));
+		const devdata = await devresponse.json();
 
-        Name = devdata.name;
-        Avatar = devdata.avatar_url;
-        Link = devdata.html_url;
-        Title = `${devdata.name}'s GitHub`;
-
-    }
-    /* Above */
+		Name = devdata.name;
+		Avatar = devdata.avatar_url;
+		Link = devdata.html_url;
+		Title = `${devdata.name}'s GitHub`;
+	}
+	/* Above */
 } else {
-    Name = name;
-    Avatar = StaffImage;
-    Link = '#'+Name.replace(' ', '_');
+	Name = name;
+	Avatar = StaffImage;
+	Link = '#' + Name.replace(' ', '_');
 }
 ---
 
 <div class="text-center text-gray-500 dark:text-gray-400" id={Name.replace(' ', '_')}>
-    <a href={Link} title={Title} target={Target} rel="noopener">
-        <img class="mx-auto mb-4 w-36 h-36 grayscale" src={Avatar} alt={Name+'s Image'} draggable="false">
-        <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {Name}
-        </h3>
-    </a>
-    <p>
-        {rank}
-    </p>
-    {rank2 ? (
-        <p>{rank2}</p>
-    ) : null}
-    {email ? (
-        <p>{email}</p>
-    ) : null}
+	<a href={Link} title={Title} target={Target} rel="noopener">
+		<img
+			class="mx-auto mb-4 w-36 h-36 grayscale"
+			src={Avatar}
+			alt={Name + 's Image'}
+			draggable="false"
+		/>
+		<h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+			{Name}
+		</h3>
+	</a>
+	<p>
+		{rank}
+	</p>
+	{rank2 ? <p>{rank2}</p> : null}
+	{email ? <p>{email}</p> : null}
 </div>

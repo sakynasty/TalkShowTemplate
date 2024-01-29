@@ -1,36 +1,42 @@
 ---
 interface Props {
 	id?: string;
-    multiple_id?: string;
-    width: string;
-    height?: string;
+	multiple_id?: string;
+	width: string;
+	height?: string;
 }
 
 const { id, multiple_id, width, height } = Astro.props;
 ---
 
-{id ? (
-    <div class="me-10 video-container">
-        <iframe 
-            width={width}
-            height={height}
-            src={"https://www.youtube-nocookie.com/embed/"+id+"?modestbranding=1&color=white"} 
-            title={"YouTube Video Player for '"+id+"' ("+width+"x"+height+")"} 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe> 
-    </div>   
-) : 
-    <div class="video-container">
-        <iframe
-            width={width}
-            height={height}
-            src={"https://www.youtube-nocookie.com/embed?playlist="+multiple_id+"&modestbranding=1&color=white&name=test"} 
-            title={"YouTube Video Player for '"+multiple_id+"' ("+width+"x"+height+")"} 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
+{
+	id ? (
+		<div class="me-10 video-container">
+			<iframe
+				width={width}
+				height={height}
+				src={'https://www.youtube-nocookie.com/embed/' + id + '?modestbranding=1&color=white'}
+				title={"YouTube Video Player for '" + id + "' (" + width + 'x' + height + ')'}
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
+		</div>
+	) : (
+		<div class="video-container">
+			<iframe
+				width={width}
+				height={height}
+				src={
+					'https://www.youtube-nocookie.com/embed?playlist=' +
+					multiple_id +
+					'&modestbranding=1&color=white&name=test'
+				}
+				title={"YouTube Video Player for '" + multiple_id + "' (" + width + 'x' + height + ')'}
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
+		</div>
+	)
 }

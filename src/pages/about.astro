@@ -3,79 +3,109 @@ import Layout from '../layouts/Layout.astro';
 import StaffCard from '../components/StaffCard.astro';
 ---
 
-<Layout 
-    title="About" 
-    description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
-    robots='noindex, nofollow'
+<Layout
+	title="About"
+	description="! Demonstration of the code/design of a template called 'TalkShowTemplate' - this site is not a real website in use !"
+	robots="noindex, nofollow"
 >
-    <p class="mt-5 text-2xl text-center align-center">
-        About
-    </p>
-    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
-        <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
-            {import.meta.env.PUBLIC_NAME}
-        </span>
-    </h1>
-    <div class="container mx-auto max-w-2xl">
-        <p class="mt-5">
-            {import.meta.env.PUBLIC_NAME} ({import.meta.env.PUBLIC_SHORTNAME}) is a French production created in June 2020 by virtual reality enjoyer. 
-            {import.meta.env.PUBLIC_SHORTNAME} believes in the immense potential of virtual reality to revolutionize television production by offering viewers an immersive experience.
-        </p>
-        <p class="mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium in felis nec pretium. Sed at nibh justo. Etiam quis augue eget est ultrices feugiat. Nunc massa augue, tempor a ipsum quis, tincidunt vestibulum enim. Morbi bibendum erat eget dictum finibus. Praesent ultricies eu massa vel elementum. Donec nec diam convallis, porttitor elit ultrices, gravida urna. Aliquam pulvinar turpis non tincidunt pellentesque. Curabitur neque mi, mollis nec mauris at, convallis vestibulum felis. Integer eleifend dolor sit amet ipsum placerat, in auctor dolor condimentum.
-        </p>
-        <h1 class="mt-10 mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
-            <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
-                {import.meta.env.PUBLIC_SHORTNAME}'s Story
-            </span>
-        </h1>
-        <p class="mt-5">
-            Sed enim odio, euismod eu pellentesque quis, vehicula ac dolor. Duis vel efficitur velit. Integer non posuere mauris, vitae sagittis urna. Sed ullamcorper mollis risus, eget aliquet tortor molestie sit amet. Ut non tempus magna, eget maximus elit. Curabitur volutpat quam vel arcu hendrerit vulputate. Cras vel nisi sit amet nibh sagittis lacinia in vitae odio. Proin sollicitudin libero quis bibendum condimentum. Sed bibendum fringilla mollis. Phasellus ac metus fringilla, suscipit est a, vulputate ante. Vivamus a mollis nisi. Donec euismod neque tellus, a pulvinar magna finibus vel. Aenean vitae finibus lacus. Nullam feugiat ac libero vitae tincidunt.
-        </p>
-        <h1 class="mt-10 mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
-            <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
-                YTS distribution
-            </span>
-        </h1>
-        <p class="mt-5">
-            Vivamus imperdiet nec libero condimentum accumsan. Vestibulum faucibus ut lorem a pretium. Proin scelerisque efficitur urna et pretium. Quisque ac finibus quam, a lobortis lectus. Donec et malesuada velit. Sed a vehicula erat. Mauris nec placerat elit, vitae facilisis eros. Proin gravida auctor justo, posuere iaculis nunc. Praesent mollis erat vitae tellus lacinia, ac pretium dolor convallis.
-
-
-        </p>
-        <p class="mt-5 mb-5">
-            Suspendisse vitae lorem tincidunt, faucibus elit a, dapibus diam. Mauris ut malesuada dolor, id aliquam ante. Duis mattis malesuada rutrum. Nullam velit neque, fringilla in neque non, accumsan scelerisque tellus. Aenean porta sollicitudin porttitor. Donec urna purus, tincidunt at sodales sed, mollis a diam. Curabitur at auctor dolor. Fusce aliquet ut urna sed convallis.
-
-
-        </p>
-        <hr>
-        <p class="mt-5 text-2xl text-center align-center">
-            Staff Team
-        </p>
-        <h1 class="mb-10 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center">
-            <span class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700">
-                {import.meta.env.PUBLIC_NAME}
-            </span>
-        </h1>
-    </div>
-        <div class="grid gap-3 lg:gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
-            <StaffCard 
-                name="Sakynasty"
-                image="460x460.svg"
-                rank="TalkShowTemplate's Developer"
-                ghapiUser="archiv3d"
-            />
-            <StaffCard 
-                name="YourName"
-                image="460x460.svg"
-                rank="Production Manager"
-                email="your.name@example.com"
-            />
-            <StaffCard 
-                name="YourName2"
-                image="460x460.svg"
-                rank="Assistant Production Manager"
-                rank2="Chronicle of discovery"
-                email="your.name.2@example.com"
-            />
-        </div>
+	<p class="mt-5 text-2xl text-center align-center">About</p>
+	<h1
+		class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center"
+	>
+		<span
+			class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700"
+		>
+			{import.meta.env.PUBLIC_NAME}
+		</span>
+	</h1>
+	<div class="container mx-auto max-w-2xl">
+		<p class="mt-5">
+			{import.meta.env.PUBLIC_NAME} ({import.meta.env.PUBLIC_SHORTNAME}) is a French production
+			created in June 2020 by virtual reality enjoyer.
+			{import.meta.env.PUBLIC_SHORTNAME} believes in the immense potential of virtual reality to revolutionize
+			television production by offering viewers an immersive experience.
+		</p>
+		<p class="mt-2">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium in felis nec pretium.
+			Sed at nibh justo. Etiam quis augue eget est ultrices feugiat. Nunc massa augue, tempor a
+			ipsum quis, tincidunt vestibulum enim. Morbi bibendum erat eget dictum finibus. Praesent
+			ultricies eu massa vel elementum. Donec nec diam convallis, porttitor elit ultrices, gravida
+			urna. Aliquam pulvinar turpis non tincidunt pellentesque. Curabitur neque mi, mollis nec
+			mauris at, convallis vestibulum felis. Integer eleifend dolor sit amet ipsum placerat, in
+			auctor dolor condimentum.
+		</p>
+		<h1
+			class="mt-10 mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center"
+		>
+			<span
+				class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700"
+			>
+				{import.meta.env.PUBLIC_SHORTNAME}'s Story
+			</span>
+		</h1>
+		<p class="mt-5">
+			Sed enim odio, euismod eu pellentesque quis, vehicula ac dolor. Duis vel efficitur velit.
+			Integer non posuere mauris, vitae sagittis urna. Sed ullamcorper mollis risus, eget aliquet
+			tortor molestie sit amet. Ut non tempus magna, eget maximus elit. Curabitur volutpat quam vel
+			arcu hendrerit vulputate. Cras vel nisi sit amet nibh sagittis lacinia in vitae odio. Proin
+			sollicitudin libero quis bibendum condimentum. Sed bibendum fringilla mollis. Phasellus ac
+			metus fringilla, suscipit est a, vulputate ante. Vivamus a mollis nisi. Donec euismod neque
+			tellus, a pulvinar magna finibus vel. Aenean vitae finibus lacus. Nullam feugiat ac libero
+			vitae tincidunt.
+		</p>
+		<h1
+			class="mt-10 mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center"
+		>
+			<span
+				class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700"
+			>
+				YTS distribution
+			</span>
+		</h1>
+		<p class="mt-5">
+			Vivamus imperdiet nec libero condimentum accumsan. Vestibulum faucibus ut lorem a pretium.
+			Proin scelerisque efficitur urna et pretium. Quisque ac finibus quam, a lobortis lectus. Donec
+			et malesuada velit. Sed a vehicula erat. Mauris nec placerat elit, vitae facilisis eros. Proin
+			gravida auctor justo, posuere iaculis nunc. Praesent mollis erat vitae tellus lacinia, ac
+			pretium dolor convallis.
+		</p>
+		<p class="mt-5 mb-5">
+			Suspendisse vitae lorem tincidunt, faucibus elit a, dapibus diam. Mauris ut malesuada dolor,
+			id aliquam ante. Duis mattis malesuada rutrum. Nullam velit neque, fringilla in neque non,
+			accumsan scelerisque tellus. Aenean porta sollicitudin porttitor. Donec urna purus, tincidunt
+			at sodales sed, mollis a diam. Curabitur at auctor dolor. Fusce aliquet ut urna sed convallis.
+		</p>
+		<hr />
+		<p class="mt-5 text-2xl text-center align-center">Staff Team</p>
+		<h1
+			class="mb-10 text-4xl font-extrabold leading-none tracking-tight dark:text-slate-100 md:text-4xl lg:text-5xl text-center align-center"
+		>
+			<span
+				class="underline underline-offset-3 decoration-8 decoration-sky-700 dark:decoration-sky-700"
+			>
+				{import.meta.env.PUBLIC_NAME}
+			</span>
+		</h1>
+	</div>
+	<div class="grid gap-3 lg:gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-5">
+		<StaffCard
+			name="Sakynasty"
+			image="460x460.svg"
+			rank="TalkShowTemplate's Developer"
+			ghapiUser="archiv3d"
+		/>
+		<StaffCard
+			name="YourName"
+			image="460x460.svg"
+			rank="Production Manager"
+			email="your.name@example.com"
+		/>
+		<StaffCard
+			name="YourName2"
+			image="460x460.svg"
+			rank="Assistant Production Manager"
+			rank2="Chronicle of discovery"
+			email="your.name.2@example.com"
+		/>
+	</div>
 </Layout>
