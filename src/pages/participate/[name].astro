@@ -25,8 +25,7 @@ let webhook;
 let avatar;
 let channel_id;
 if (whitelistName.includes('a-simple-emission')) {
-	webhook =
-		'https://discord.com/api/webhooks/1200589279659823105/oChCO6aPGomqhP-a2es5BdVE_o6oyS20cWfZ9E7Jvc4kXv6dHYtuj8Rc40rzzAi43MYW';
+	webhook = import.meta.env.PUBLIC_ASE_WEBHOOK_URL;
 	avatar =
 		'https://cdn.discordapp.com/attachments/1200538217468936222/1200589103272562809/a-simple-emission.png';
 	channel_id = '1200588939275284540';
