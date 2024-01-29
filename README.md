@@ -1,8 +1,10 @@
 # Template for Talk Shows / Programs & Films
 
+Called "Your Talk Show (YTS)" or "Talk Show Template (TST)".
+
 ## 🚧 Important notice
 
-Everyone has the right to use the code of the repo "TalkShowTemplate" by [@Sakynasty](https://github.com/sakynasty) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
+Everyone has the right to use the code of the repo "TalkShowTemplate" by [me](https://github.french.eu.org) nevertheless all quotations of the code and original design must remain effective by respect of the working hours on the site which you avoid thanks to that.
 
 ## 👀 Launch & Demo
 

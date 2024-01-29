@@ -1,7 +1,8 @@
 ---
-var FEImgWhite = '/assets/img/components/favemission/ase_white.png';
-var FEImgBlack = '/assets/img/components/favemission/ase_black.png';
-var FEHead = '/assets/img/components/favemission/1920x1080.svg';
+import FEImgWhite from '../assets/img/components/favemission/ase_white.png';
+import FEImgBlack from '../assets/img/components/favemission/ase_black.png';
+var FEHead = '../assets/img/components/favemission/1920x1080.svg';
+import { Image } from 'astro:assets';
 var FEStyle = "height:50rem; background-image: url('" + FEHead + "');";
 ---
 
@@ -10,13 +11,13 @@ var FEStyle = "height:50rem; background-image: url('" + FEHead + "');";
 		class="flex items-center justify-center h-full w-full dark:bg-gray-900 bg-gray-100 bg-opacity-50 dark:bg-opacity-50"
 	>
 		<div class="text-center -mt-4r">
-			<img
+			<Image
 				src={FEImgWhite}
 				alt="FEImgWhite Not Found"
 				class="dark:block hidden"
 				draggable="false"
 			/>
-			<img
+			<Image
 				src={FEImgBlack}
 				alt="FEImgBlack Not Found"
 				class="block dark:hidden"

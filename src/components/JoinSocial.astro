@@ -1,6 +1,7 @@
 ---
-var VRCLogoWhite = '/assets/img/components/join_social/vrchat_white.png';
-var VRCLogoBlack = '/assets/img/components/join_social/vrchat_black.png';
+import VRCLogoWhite from '../assets/img/components/join_social/vrchat_white.png';
+import VRCLogoBlack from '../assets/img/components/join_social/vrchat_black.png';
+import { Image } from 'astro:assets';
 
 var ghUrl = import.meta.env.PUBLIC_GITHUB_URL;
 ---
@@ -11,14 +12,14 @@ var ghUrl = import.meta.env.PUBLIC_GITHUB_URL;
 			<h2 class="text-3xl font-semibold text-center mb-6">Find YourName on</h2>
 			<div class="flex flex-wrap justify-center gap-2">
 				<a href={ghUrl} title="See the show from the audience!" rel="noopener" target="_blank">
-					<img
+					<Image
 						src={VRCLogoWhite}
 						height="50"
 						alt="VRChat Logo"
 						class="dark:block hidden"
 						draggable="false"
 					/>
-					<img
+					<Image
 						src={VRCLogoBlack}
 						height="50"
 						alt="VRChat Logo (Black)"

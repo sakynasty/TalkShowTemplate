@@ -1,6 +1,7 @@
 ---
 import Footer from '../components/Layouts/Footer.astro';
 import Navbar from '../components/Layouts/Navbar.astro';
+import Themes from 'astro-themes';
 
 interface Props {
 	title: string;
@@ -13,7 +14,7 @@ const { title, description, robots, redirect } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -26,6 +27,7 @@ const { title, description, robots, redirect } = Astro.props;
 		<meta name="robots" content={robots} />
 		<meta name="googlebot" content={robots} />
 		{redirect ? <meta http-equiv="refresh" content={`0; url=${Astro.url.origin}`} /> : null}
+		<Themes defaultTheme="light" />
 	</head>
 	<body class="dark:bg-slate-950 bg-slate-100 dark:text-slate-100 text-slate-950">
 		<header>
@@ -36,6 +38,5 @@ const { title, description, robots, redirect } = Astro.props;
 		</main>
 		<Footer />
 		<script src="../assets/js/flowbite-1.8.1.min.js"></script>
-		<script src="../assets/js/switch_theme.js"></script>
 	</body>
 </html>

@@ -1,8 +1,8 @@
 {
 	"name": "talkshowtemplate",
-	"homepage": "https://github.com/Sakynasty/TalkShowTemplate",
-	"author": "Sakynasty (https://github.com/Sakynasty)",
-	"license": "https://github.com/Sakynasty/TalkShowTemplate/tree/main#-important-notice",
+	"homepage": "https://talkshowtemplate.e-girl.eu.org",
+	"author": "See me in https://github.french.eu.org",
+	"license": "https://talkshowtemplate.e-girl.eu.org/#-important-notice",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -20,6 +20,7 @@
 		"tailwindcss": "^3.4.1"
 	},
 	"devDependencies": {
+		"astro-themes": "^0.2.4",
 		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-astro": "^0.31.3",

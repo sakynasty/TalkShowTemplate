@@ -1,7 +1,8 @@
 ---
-var LogoWhite = '/assets/img/components/navbar/logo_white.png';
-var LogoBlack = '/assets/img/components/navbar/logo_black.png';
+import LogoWhite from '../../assets/img/components/navbar/logo_white.png';
+import LogoBlack from '../../assets/img/components/navbar/logo_black.png';
 import SwitchTheme from './SwitchTheme.astro';
+import { Image } from 'astro:assets';
 
 var classA = 'hover:pb-4 hover:border-b-4 hover:border-sky-700';
 var classADropdown =
@@ -14,7 +15,7 @@ var classADropdown =
 	<div class="flex-1 flex justify-between items-center">
 		<div class="flex text-lg font-semibold">
 			<a href="/" title={import.meta.env.PUBLIC_NAME} rel="noopener">
-				<img
+				<Image
 					src={LogoWhite}
 					width="105"
 					height="50"
@@ -22,7 +23,7 @@ var classADropdown =
 					alt="Your Logo (White)"
 					draggable="false"
 				/>
-				<img
+				<Image
 					src={LogoBlack}
 					width="105"
 					height="50"
@@ -34,7 +35,7 @@ var classADropdown =
 			<SwitchTheme />
 		</div>
 	</div>
-	<label for="menu-toggle" class="cursor-pointer lg:hidden block dark:bg-slate-100 bg-slate-900">
+	<label for="menu-toggle" class="cursor-pointer lg:hidden block bg-slate-100 dark:bg-slate-900">
 		<svg
 			class="fill-current text-gray-900"
 			xmlns="http://www.w3.org/2000/svg"

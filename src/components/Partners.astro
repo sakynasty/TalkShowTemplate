@@ -1,5 +1,6 @@
 ---
-var Placeholder = '/assets/img/components/partners/200x200.svg';
+import { Image } from 'astro:assets';
+import Placeholder from '../assets/img/components/partners/200x200.svg';
 var ghUrl = import.meta.env.PUBLIC_GITHUB_URL;
 ---
 
@@ -16,13 +17,13 @@ var ghUrl = import.meta.env.PUBLIC_GITHUB_URL;
 		</h1>
 		<div class="flex flex-nowrap">
 			<a href={ghUrl} target="_blank" title="Join the NoName Discord">
-				<img src={Placeholder} alt="Logo" class="mt-3 me-5" draggable="false" />
+				<Image src={Placeholder} alt="Logo" class="mt-3 me-5" draggable="false" />
 			</a>
 			<a href={ghUrl} target="_blank" title="Join the BlablaName on Twitch">
-				<img src={Placeholder} alt="Logo" class="mt-3 me-5" draggable="false" />
+				<Image src={Placeholder} alt="Logo" class="mt-3 me-5" draggable="false" />
 			</a>
 			<a href={ghUrl} target="_blank" title="Join the LaoName Discord">
-				<img src={Placeholder} alt="Logo" class="mt-3 me-5" draggable="false" />
+				<Image src={Placeholder} alt="Logo" class="mt-3 me-5" draggable="false" />
 			</a>
 		</div>
 	</div>
